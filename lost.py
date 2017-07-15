@@ -1,19 +1,30 @@
-import telegram # importamos las librerias 
+import telegram # importamos las librerias  
+import logging 
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from time import sleep
 
 TOKEN = '417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs'
 
 bot = telegram.Bot(token=TOKEN)
+updater = Updater(token=TOKEN)
+dispatcher = updater.dispatcher
 
-updates = bot.get_updates()
+# Functions that contains the actions of the commands when they are pressed
+def start(bot, update):
+     bot.send_message(chat_id=update.message.chat_id, 
+                      text='<b>Lost Wiki</b>.\r\nHere you can find information about the show.',
+                      parse_mode=telegram.ParseMode.HTML)
+     bot.send_photo(chat_id=update.message.chat_id, photo=open('img/lost1.png', 'rb'))
 
-def updateslist():
-	chat_id = bot.get_updates()[-1].message.chat_id
-	for u in updates: 
-		if u.message.text == "Hurley": 
-			bot.send_message(chat_id=chat_id, text="QUE PASO HURLEY!")
-		elif u.message.text == "Vicent": 
-			bot.send_message(chat_id=chat_id, text="BIcent el de las judias magicas")
-print([u.message.text for u in updates])
-updateslist()
+def unknown(bot, update):
+     bot.send_message(chat_id=update.message.chat_id, text="Sorry, I didn't understand that command.")
 
-print chat_id
+handlers = [
+     CommandHandler('start', start), 
+     MessageHandler(Filters.command, unknown)
+]
+
+for handler in handlers: 
+     dispatcher.add_handler(handler)
+
+updater.start_polling()

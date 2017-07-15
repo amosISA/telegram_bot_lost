@@ -1,4 +1,4 @@
-# Telegram bot with python 
+# Telegram bot with python - [My Bot](http://telegram.me/Lost815Bot) 
 
 ## Description 
 I created this bot to get information from show Lost such as characters, weird things... It's like a wiki. 
