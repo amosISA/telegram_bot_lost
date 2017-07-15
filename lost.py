@@ -25,15 +25,20 @@ def start(bot, update):
 def unknown(bot, update):
      bot.send_message(chat_id=update.message.chat_id, text="Sorry, I didn't understand that command.")
 
+
+# Exec the commands
 handlers = [
      CommandHandler('start', start), 
      MessageHandler(Filters.command, unknown)
 ]
 
-for handler in handlers: 
-     try:
-     	dispatcher.add_handler(handler)
-     except Exception as err: 
-	logger.error(err)
+def main(list):
+     for handler in list: 
+	try:
+            dispatcher.add_handler(handler)
+     	except Exception as err:
+            logger.error(err)
 
-updater.start_polling()
+if __name__ == '__main__':
+    main(handlers)
+    updater.start_polling()
