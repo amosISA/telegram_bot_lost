@@ -9,6 +9,12 @@ bot = telegram.Bot(token=TOKEN)
 updater = Updater(token=TOKEN)
 dispatcher = updater.dispatcher
 
+# To know when things dont work as expected 
+LOG_FILE = 'lost_err.txt';
+logging.basicConfig(filename=LOG_FILE, level=logging.DEBUG, 
+                    format='%(asctime)s %(levelname)s %(name)s %(message)s')
+logger = logging.getLogger(__name__)
+
 # Functions that contains the actions of the commands when they are pressed
 def start(bot, update):
      bot.send_message(chat_id=update.message.chat_id, 
@@ -25,6 +31,9 @@ handlers = [
 ]
 
 for handler in handlers: 
-     dispatcher.add_handler(handler)
+     try:
+     	dispatcher.add_handler(handler)
+     except Exception as err: 
+	logger.error(err)
 
 updater.start_polling()

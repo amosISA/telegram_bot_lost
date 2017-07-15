@@ -1,0 +1,46 @@
+2017-07-15 13:15:57,714 DEBUG JobQueue JobQueue thread started
+2017-07-15 13:15:57,715 DEBUG telegram.ext.updater dispatcher - started
+2017-07-15 13:15:57,716 DEBUG telegram.ext.updater updater - started
+2017-07-15 13:15:57,716 DEBUG telegram.ext.updater Updater thread started
+2017-07-15 13:15:57,716 DEBUG telegram.bot Entering: set_webhook
+2017-07-15 13:15:57,717 DEBUG telegram.vendor.ptb_urllib3.urllib3.connectionpool Starting new HTTPS connection (1): api.telegram.org
+2017-07-15 13:15:57,727 DEBUG telegram.ext.dispatcher Dispatcher started
+2017-07-15 13:15:58,146 DEBUG telegram.vendor.ptb_urllib3.urllib3.connectionpool https://api.telegram.org:443 "POST /bot417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs/setWebhook HTTP/1.1" 200 68
+2017-07-15 13:15:58,147 DEBUG telegram.bot True
+2017-07-15 13:15:58,147 DEBUG telegram.bot Exiting: set_webhook
+2017-07-15 13:15:58,147 DEBUG telegram.bot Entering: get_updates
+2017-07-15 13:16:02,998 DEBUG telegram.vendor.ptb_urllib3.urllib3.connectionpool https://api.telegram.org:443 "POST /bot417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs/getUpdates HTTP/1.1" 200 381
+2017-07-15 13:16:02,999 DEBUG telegram.bot Getting updates: [363557741]
+2017-07-15 13:16:02,999 DEBUG telegram.bot [<telegram.update.Update object at 0xb64122ec>]
+2017-07-15 13:16:03,000 DEBUG telegram.bot Exiting: get_updates
+2017-07-15 13:16:03,000 DEBUG telegram.bot Entering: get_updates
+2017-07-15 13:16:03,045 DEBUG telegram.ext.dispatcher Processing Update: {'message': {'delete_chat_photo': False, 'new_chat_photo': [], 'from': {'username': u'amosISA', 'first_name': u'Amos', 'last_name': u'Isaila', 'id': 243088674, 'language_code': u'es-ES'}, 'text': u'/start', 'entities': [{'length': 6, 'type': u'bot_command', 'offset': 0}], 'channel_chat_created': False, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'username': u'amosISA', 'first_name': u'Amos', 'last_name': u'Isaila', 'type': u'private', 'id': 243088674}, 'photo': [], 'date': 1500117362, 'group_chat_created': False, 'message_id': 186, 'new_chat_member': None}, 'update_id': 363557741}
+2017-07-15 13:16:03,045 DEBUG telegram.bot Entering: get_me
+2017-07-15 13:16:03,045 DEBUG telegram.vendor.ptb_urllib3.urllib3.connectionpool Starting new HTTPS connection (2): api.telegram.org
+2017-07-15 13:16:03,439 DEBUG telegram.vendor.ptb_urllib3.urllib3.connectionpool https://api.telegram.org:443 "GET /bot417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs/getMe HTTP/1.1" 200 85
+2017-07-15 13:16:03,440 DEBUG telegram.bot {'username': u'Lost815Bot', 'first_name': u'lost_bot', 'id': 417858009}
+2017-07-15 13:16:03,441 DEBUG telegram.bot Exiting: get_me
+2017-07-15 13:16:03,441 DEBUG telegram.bot Entering: send_message
+2017-07-15 13:16:03,555 DEBUG telegram.vendor.ptb_urllib3.urllib3.connectionpool https://api.telegram.org:443 "POST /bot417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs/sendMessage HTTP/1.1" 200 350
+2017-07-15 13:16:03,558 DEBUG telegram.bot {'delete_chat_photo': False, 'new_chat_photo': [], 'from': {'username': u'Lost815Bot', 'first_name': u'lost_bot', 'id': 417858009}, 'text': u'Lost Wiki.\nHere you can find information about the show.', 'entities': [{'length': 9, 'type': u'bold', 'offset': 0}], 'channel_chat_created': False, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'username': u'amosISA', 'first_name': u'Amos', 'last_name': u'Isaila', 'type': u'private', 'id': 243088674}, 'photo': [], 'date': 1500117363, 'group_chat_created': False, 'message_id': 187, 'new_chat_member': None}
+2017-07-15 13:16:03,559 DEBUG telegram.bot Exiting: send_message
+2017-07-15 13:16:03,559 DEBUG telegram.bot Entering: send_photo
+2017-07-15 13:16:05,876 DEBUG telegram.vendor.ptb_urllib3.urllib3.connectionpool https://api.telegram.org:443 "POST /bot417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs/sendPhoto HTTP/1.1" 200 626
+2017-07-15 13:16:05,877 DEBUG telegram.bot {'delete_chat_photo': False, 'new_chat_photo': [], 'from': {'username': u'Lost815Bot', 'first_name': u'lost_bot', 'id': 417858009}, 'photo': [{'width': 90, 'height': 67, 'file_id': 'AgADBAADA6kxG9NAUVPxZigotLHmePAFvRkABKE0jbhITjn2UEcDAAEC', 'file_size': 1213}, {'width': 320, 'height': 240, 'file_id': 'AgADBAADA6kxG9NAUVPxZigotLHmePAFvRkABNC-nXzI1hCiUUcDAAEC', 'file_size': 13692}, {'width': 350, 'height': 263, 'file_id': 'AgADBAADA6kxG9NAUVPxZigotLHmePAFvRkABLQsGuFxFwrqT0cDAAEC', 'file_size': 15867}], 'channel_chat_created': False, 'entities': [], 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'username': u'amosISA', 'first_name': u'Amos', 'last_name': u'Isaila', 'type': u'private', 'id': 243088674}, 'date': 1500117365, 'group_chat_created': False, 'message_id': 188, 'new_chat_member': None}
+2017-07-15 13:16:05,878 DEBUG telegram.bot Exiting: send_photo
+2017-07-15 13:16:07,690 DEBUG telegram.vendor.ptb_urllib3.urllib3.connectionpool https://api.telegram.org:443 "POST /bot417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs/getUpdates HTTP/1.1" 200 320
+2017-07-15 13:16:07,691 DEBUG telegram.bot Getting updates: [363557742]
+2017-07-15 13:16:07,691 DEBUG telegram.bot [<telegram.update.Update object at 0xb6412fac>]
+2017-07-15 13:16:07,691 DEBUG telegram.bot Exiting: get_updates
+2017-07-15 13:16:07,692 DEBUG telegram.bot Entering: get_updates
+2017-07-15 13:16:07,698 DEBUG telegram.ext.dispatcher Processing Update: {'message': {'delete_chat_photo': False, 'new_chat_photo': [], 'from': {'username': u'amosISA', 'first_name': u'Amos', 'last_name': u'Isaila', 'id': 243088674, 'language_code': u'es-ES'}, 'text': u'asd', 'entities': [], 'channel_chat_created': False, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'username': u'amosISA', 'first_name': u'Amos', 'last_name': u'Isaila', 'type': u'private', 'id': 243088674}, 'photo': [], 'date': 1500117367, 'group_chat_created': False, 'message_id': 189, 'new_chat_member': None}, 'update_id': 363557742}
+2017-07-15 13:16:10,716 DEBUG telegram.vendor.ptb_urllib3.urllib3.connectionpool https://api.telegram.org:443 "POST /bot417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs/getUpdates HTTP/1.1" 200 379
+2017-07-15 13:16:10,717 DEBUG telegram.bot Getting updates: [363557743]
+2017-07-15 13:16:10,718 DEBUG telegram.bot [<telegram.update.Update object at 0xb641d14c>]
+2017-07-15 13:16:10,718 DEBUG telegram.bot Exiting: get_updates
+2017-07-15 13:16:10,718 DEBUG telegram.bot Entering: get_updates
+2017-07-15 13:16:10,732 DEBUG telegram.ext.dispatcher Processing Update: {'message': {'delete_chat_photo': False, 'new_chat_photo': [], 'from': {'username': u'amosISA', 'first_name': u'Amos', 'last_name': u'Isaila', 'id': 243088674, 'language_code': u'es-ES'}, 'text': u'/wer', 'entities': [{'length': 4, 'type': u'bot_command', 'offset': 0}], 'channel_chat_created': False, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'username': u'amosISA', 'first_name': u'Amos', 'last_name': u'Isaila', 'type': u'private', 'id': 243088674}, 'photo': [], 'date': 1500117370, 'group_chat_created': False, 'message_id': 190, 'new_chat_member': None}, 'update_id': 363557743}
+2017-07-15 13:16:10,732 DEBUG telegram.bot Entering: send_message
+2017-07-15 13:16:10,839 DEBUG telegram.vendor.ptb_urllib3.urllib3.connectionpool https://api.telegram.org:443 "POST /bot417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs/sendMessage HTTP/1.1" 200 282
+2017-07-15 13:16:10,840 DEBUG telegram.bot {'delete_chat_photo': False, 'new_chat_photo': [], 'from': {'username': u'Lost815Bot', 'first_name': u'lost_bot', 'id': 417858009}, 'text': u"Sorry, I didn't understand that command.", 'entities': [], 'channel_chat_created': False, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'username': u'amosISA', 'first_name': u'Amos', 'last_name': u'Isaila', 'type': u'private', 'id': 243088674}, 'photo': [], 'date': 1500117370, 'group_chat_created': False, 'message_id': 191, 'new_chat_member': None}
+2017-07-15 13:16:10,842 DEBUG telegram.bot Exiting: send_message
