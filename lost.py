@@ -22,6 +22,11 @@ def start(bot, update):
                       parse_mode=telegram.ParseMode.HTML)
      bot.send_photo(chat_id=update.message.chat_id, photo=open('img/lost1.png', 'rb'))
 
+def character(bot, update): 
+     bot.send_message(chat_id=update.message.chat_id, 
+                      text='<a href="http://es.lostpedia.wikia.com/wiki/Portal:Personajes_Principales">Main Characters</a>',
+                      parse_mode=telegram.ParseMode.HTML)
+
 def unknown(bot, update):
      bot.send_message(chat_id=update.message.chat_id, text="Sorry, I didn't understand that command.")
 
@@ -29,6 +34,7 @@ def unknown(bot, update):
 # Exec the commands
 handlers = [
      CommandHandler('start', start), 
+     CommandHandler('character', character),
      MessageHandler(Filters.command, unknown)
 ]
 
