@@ -4,10 +4,10 @@
 I created this bot to get information from show Lost such as characters, weird things... It's like a wiki. 
 
 ## Things I've done to make my bot work
-* Clone wiht git the Python interface for the [Telegram Bot API](https://github.com/python-telegram-bot/python-telegram-bot). 
+* Clone with git the Python interface for the [Telegram Bot API](https://github.com/python-telegram-bot/python-telegram-bot). 
 * Install it. 
 ```
-* cd python-telegram-bot
-* python setup.py install
+cd python-telegram-bot
+python setup.py install
 ````
 * Create project and start coding Lost bot! 
