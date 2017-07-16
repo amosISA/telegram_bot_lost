@@ -9,6 +9,13 @@ bot = telegram.Bot(token=TOKEN)
 updater = Updater(token=TOKEN)
 dispatcher = updater.dispatcher
 
+# Reply to messages that are sent to my bot 
+updates = bot.get_updates()
+print([u.message.text for u in updates if u.message.text])
+for u in updates: 
+     if u.message.text: 
+	bot.send_message(chat_id=u.message.chat_id, text="Nada de nada")
+
 # To know when things dont work as expected 
 LOG_FILE = 'lost_err.txt';
 logging.basicConfig(filename=LOG_FILE, level=logging.DEBUG, 
@@ -27,6 +34,26 @@ def character(bot, update):
                       text='<a href="http://es.lostpedia.wikia.com/wiki/Portal:Personajes_Principales">Main Characters</a>',
                       parse_mode=telegram.ParseMode.HTML)
 
+def description(bot, update):
+     bot.send_message(chat_id=update.message.chat_id,
+                      text='<a href="http://telegram.me/Lost815Bot">Bot description</a>',
+                      parse_mode=telegram.ParseMode.HTML)
+
+def strange(bot, update):
+     bot.send_message(chat_id=update.message.chat_id,
+                      text='<a href="http://es.lostpedia.wikia.com/wiki/Portal:Misterios">Weird Events in Lost</a>',
+                      parse_mode=telegram.ParseMode.HTML)
+
+def places(bot, update):
+     bot.send_message(chat_id=update.message.chat_id,
+                      text='<a href="http://es.lostpedia.wikia.com/wiki/Portal:Lugares">Places</a>',
+                      parse_mode=telegram.ParseMode.HTML)
+
+def seasons(bot, update):
+     bot.send_message(chat_id=update.message.chat_id,
+                      text='<a href="http://es.lostpedia.wikia.com/wiki/Portal:Episodios">Seasons</a>',
+                      parse_mode=telegram.ParseMode.HTML)
+
 def unknown(bot, update):
      bot.send_message(chat_id=update.message.chat_id, text="Sorry, I didn't understand that command.")
 
@@ -35,6 +62,10 @@ def unknown(bot, update):
 handlers = [
      CommandHandler('start', start), 
      CommandHandler('character', character),
+     CommandHandler('desc', description),
+     CommandHandler('strange', strange),
+     CommandHandler('places', places),
+     CommandHandler('season', seasons),
      MessageHandler(Filters.command, unknown)
 ]
 
