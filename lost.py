@@ -1,20 +1,12 @@
 import telegram # importamos las librerias  
 import logging 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-from time import sleep
 
 TOKEN = '417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs'
 
 bot = telegram.Bot(token=TOKEN)
 updater = Updater(token=TOKEN)
 dispatcher = updater.dispatcher
-
-# Reply to messages that are sent to my bot 
-updates = bot.get_updates()
-print([u.message.text for u in updates if u.message.text])
-for u in updates: 
-     if u.message.text: 
-	bot.send_message(chat_id=u.message.chat_id, text="Nada de nada")
 
 # To know when things dont work as expected 
 LOG_FILE = 'lost_err.txt';
