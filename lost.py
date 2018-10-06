@@ -1,15 +1,16 @@
 import telegram # importamos las librerias  
 import logging 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from TokenManager import TokenManager
 
-TOKEN = '417858009:AAHFYd2NkF3TtSHfi5wOoy4kOrismsquTYs'
+TOKEN = TokenManager.getToken('text_files/secured_token.txt')
 
 bot = telegram.Bot(token=TOKEN)
 updater = Updater(token=TOKEN)
 dispatcher = updater.dispatcher
 
 # To know when things dont work as expected 
-LOG_FILE = 'lost_err.txt';
+LOG_FILE = 'text_files/lost_err.txt';
 logging.basicConfig(filename=LOG_FILE, level=logging.DEBUG, 
                     format='%(asctime)s %(levelname)s %(name)s %(message)s')
 logger = logging.getLogger(__name__)
