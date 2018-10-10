@@ -101,4 +101,6 @@ ENV/
 .mypy_cache/
 
 #logger
-lost_err.txt 
+text_files/lost_err.txt 
+
+text_files/secured_token.txt
